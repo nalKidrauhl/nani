@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="background">
+	
+		<div class="nav">
+			<a class="a active" href="#">HOME</a>
+			<a class="b" href="#">ABOUT ME</a>
+			<a class="c" href="#">THINGS I LOVE</a>
+		</div>
+			<div class="content">
+				
+				<div class="home">
+					<h1>I am Nur Ainal Nadira</h1>
+					<h3>Diploma in Computer Science</h3>
+				</div>
+				
+				<div class="aboutme">
+					<div class="images">
+							<img width="160" height="280" src="Snapchat-428161472.jpg">
+					</div>
+					<p>Hello guys,<br>
+					Welcome to my Ainal's personal website.This website is all about myself and things i like.<br>
+					My name is Nur Ainal Nadira and you can call me Ainal.<br>
+					Iam 20 years old and currently studying at UiTM Kota Samarahan 2.<br>
+					During my free time i usually spend my time wathing NCT's and Justin's videos at youtube.
+					</p>
+				</div>
+				
+				<div class="thingsilove">
+						<div class="images">
+							<img width="420" height="315" src="justin.jpg">
+							<iframe width="420" height="315" src="https://www.youtube.com/embed/Y2E71oe0aSM?autoplay=1"></iframe>
+							<p>click to see the music video of 1000 Hours</p>
+					</div><br>
+						<div class="images">
+							<img width="420" height="315" src="127.jpg">
+							<iframe width="420" height="315" src="https://www.youtube.com/embed/95oZNxW5Rcx95oZNxW5Rc?autoplay=1"></iframe>
+							<p>click to see the music video of Superhuman by Nct 127</p>
+					</div>
+						<div class="images">
+							<img width="420" height="315" src="dream.jpg">
+							<iframe width="420" height="315" src="https://www.youtube.com/embed/iJZ0gfKPo?autoplay=1"></iframe>
+							<p>click to see the music video of Boom by Nct Dream</p>
+					</div>
+				</div>					
+			</div>
+	</div>							
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+			$('a').click(function(){
+				var selected = $(this);
+				$('a').removeClass('active');
+				$(selected).addClass('active');
+			});
+			
+			var $a = $('.a'),
+			$b = $('.b'),
+			$c = $('.c'),
+			$home = $('.home'),
+			$aboutme = $('.aboutme'),
+			$thingsilove = $('.thingsilove');
+			
+			$a.click(function(){
+				$home.fadeIn();
+				$aboutme.fadeOut();				
+			});
+			$b.click(function(){
+				$home.fadeOut();
+				$aboutme.fadeIn();				
+			});
+			$c.click(function(){
+				$thingsilove.fadeIn();
+				$home.fadeOut();
+				$aboutme.fadeOut();			
+			});
+		});
+	</script>
+</body>
+</html>
